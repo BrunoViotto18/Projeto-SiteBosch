@@ -1,0 +1,300 @@
+@import url(//db.onlinewebfonts.com/c/952bab25f6798d6bb1937d67e9bee4dd?family=Sans);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Bosch Sans, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #eee;
+    color: #252525;
+    position: relative;
+    overflow-y: hidden;
+}
+
+/* Header */
+
+@media (min-width: 768px){
+    .header {
+        height: 102px;
+    }
+}
+
+.header::before{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/linha-bosch.png);
+}
+
+.header{
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+    z-index: 10;
+}
+
+.header-container{
+    height: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.header-left{
+    float: left;
+}
+
+.header-right{
+    width: 1025px;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+    margin: 0 0 0 auto;
+}
+
+.header-container a{
+    display: block;
+}
+
+.header-container img  {
+    max-width: 144px;
+    display: block;
+}
+
+.busca-header{
+    margin-right: 10px;
+    margin-top: 25px;
+}
+
+.busca-header-form{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+}
+
+
+.header-container .busca img{
+    height: 24px;
+    width: 24px;
+}
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.iconbusca{
+    position:absolute;
+    top:0; left:0;
+    z-index:10;
+    border:none;
+    background:transparent;
+    outline:none;
+}
+
+.header-right .menus{
+    display:inline-block;
+}
+
+.header-right .busca{
+    display:inline-block;
+    position: relative;
+    background: 0 0;
+    border: 0;
+    margin: 0;
+    
+}
+
+.header-right.busca::placeholder{
+    padding-left: 10px;
+}
+
+/* MENU - MENU*/
+
+.menu{
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu:hover{
+    cursor: pointer;
+}
+
+.menu:hover .hamburger *{
+    background-color: #007bc0;
+}
+
+.menu:hover .menu-text{
+    color: #007bc0;
+}
+
+.hamburger{
+    width: 18px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hamburger *{
+    background-color: #252525;
+    height: 1px;
+    width: 18px;
+}
+
+.menu-text{
+    margin: 0 0 0 10px;
+}
+
+/* Menu Bar */
+
+.menu-bar{
+    background-color: #fff;
+    position: absolute;
+    top: -333px;
+    height: 435px;
+    width: 100vw;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.menu-bar-js{
+    transform: translateY(435px);
+    z-index: 5;
+}
+
+.menu-bar-container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.menu1 ul li{
+    color: #000;
+    line-height: 1.4;
+    font-size: 1.5rem;
+    cursor: pointer;
+    list-style: none;
+}
+
+.menu1 ul li a{
+    color: #000;
+}
+
+.menu1 ul li:hover{
+    color: #007bc0;
+}
+
+/* Login */
+
+.login{
+    width: 100%;
+    height: calc(100vh - 305px - 16px);
+}
+
+.login-container{
+    margin: auto;
+    width: 800px;
+    height: 600px;
+    padding: 50px;
+    background-color: #fff;    
+}
+
+.login-ets h1{
+    color: #005691;
+    font-size: 1.75rem;
+}
+
+.login-btn{
+    background-color: #1a679c;
+    color: #fff;
+    display: block;
+    width: 120px;
+    height: 50px;
+    text-decoration: none;
+    border-bottom: 2px solid #008ecf;
+}
+
+/* Footer */
+
+.footer{
+    position: relative;
+    bottom: 0px;
+}
+
+.redes-sociais-texto{
+    max-width: 1170px;
+    margin: 0 auto 15px;
+    text-align: center;
+}
+
+.redes-sociais{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.redes-sociais-container{
+    display: flex;
+    flex-direction: row;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.rede-social{
+    text-decoration: none;
+    max-width: 40px;
+    margin: 0 5px;
+}
+
+.rede-social img{
+    max-width: 40px;
+}
+
+.footer-copyright{
+    background-color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright{
+    font-weight: 900;
+    font-size: 0.875em;
+    margin-right: 30px;
+}
+
+.copyright-links a{
+    color: #252525;
+    margin-right: 30px;
+    text-decoration: none;
+    font-size: 0.875em;
+}
+
+.copyright-links a:hover{
+    color: #ccc;
+}
+
+.footer::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/linha-bosch.png);
+}
