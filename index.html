@@ -25,6 +25,8 @@
             </div>
 
             <div class="header-right">
+
+    <!-- === Menu Button === -->
                 <div class="menu">
                     <div class="hamburger">
                         <div id="burger1"></div>
@@ -34,22 +36,30 @@
                     <span class="menu-text menus">Menu</span>
                 </div>
 
+    <!-- === Search Bar === -->
                 <div class="O-Header__mainRow__item O-Header__mainRow__search">
-                 <m-search-field-dynamic class="M-SearchField" data-placeholder="Buscar" data-label="Buscar" data-aria-label-search-form="Side wide" data-aria-label-search-icon="Procurar" data-aria-label-close-icon="Fechar" >
-                    <form aria-label="Side wide" role="search" class="M-SearchField__form ng-pristine ng-valid" ng-submit="$ctrl.onSubmit()" ng-click="$ctrl.openSearch()" tabindex="0"><a-icon-dynamic class="M-SearchField__search" data-name="'search'" ng-click="$ctrl.openSearch()" data-width="24" data-height="24" tabindex="-1" data-ng-attr-aria-label="{{$ctrl.ariaLabelSearchIcon}}" role="button" aria-label="Procurar">
-                        <i class="fa fa-search A-Icon A-Icon--search" data-ng-class="[ 'A-Icon--' + $ctrl.name, $ctrl.variation &amp;&amp; 'A-Icon--' + $ctrl.variation, {'A-Icon--inverted': $ctrl.inverted} ]" data-ng-attr-width="{{$ctrl.width || 24}}" data-ng-attr-height="{{$ctrl.height || 24}}" width="24" height="24"><!---->
-                            <use xlink:href="https://www.bosch.com.br/#search" data-ng-attr-xlink:href="{{$ctrl.name &amp;&amp; ('#' + $ctrl.name)}}"></use></i></a-icon-dynamic>
+                    <m-search-field-dynamic class="M-SearchField" data-placeholder="Buscar" data-label="Buscar" data-aria-label-search-form="Side wide" data-aria-label-search-icon="Procurar" data-aria-label-close-icon="Fechar" >
+                        <form aria-label="Side wide" role="search" class="M-SearchField__form ng-pristine ng-valid" ng-submit="$ctrl.onSubmit()" ng-click="$ctrl.openSearch()" tabindex="0">
+                            <a-icon-dynamic class="M-SearchField__search" data-name="'search'" ng-click="$ctrl.openSearch()" data-width="24" data-height="24" tabindex="-1" data-ng-attr-aria-label="{{$ctrl.ariaLabelSearchIcon}}" role="button" aria-label="Procurar">
+                                <i class="fa fa-search A-Icon A-Icon--search" data-ng-class="[ 'A-Icon--' + $ctrl.name, $ctrl.variation &amp;&amp; 'A-Icon--' + $ctrl.variation, {'A-Icon--inverted': $ctrl.inverted} ]" data-ng-attr-width="{{$ctrl.width || 24}}" data-ng-attr-height="{{$ctrl.height || 24}}" width="24" height="24"><!---->
+                                    <use xlink:href="https://www.bosch.com.br/#search" data-ng-attr-xlink:href="{{$ctrl.name &amp;&amp; ('#' + $ctrl.name)}}"></use>
+                                </i>
+                            </a-icon-dynamic>
                             <input onblur="voltarTamanho()" onclick="aumentarTamanho()" id="inputbusca" class="M-SearchField__input ng-pristine ng-valid ng-empty ng-touched" ng-style="$ctrl.viewport > 1 &amp;&amp; !$ctrl.isStatic &amp;&amp; !$ctrl.open &amp;&amp; {'width': $ctrl.calculatedWidth}" type="search" placeholder="Buscar" aria-label="Buscar" ng-model="$ctrl.searchTerm" ng-keyup="$ctrl.checkSearchTerm()" tabindex="-1" aria-invalid="false" style="width: 57px;"><!---->
-                    </form><!---->
-                    <div class="M-SearchField__widthCalculationWrapper">Buscar</div></m-search-field-dynamic> </div>
+                        </form><!---->
+                        <div class="M-SearchField__widthCalculationWrapper">Buscar</div>
+                    </m-search-field-dynamic>
+                </div>
             </div>
         </div>
     </header>
 
-<!-- === Menu Bar === -->
+    <!-- === Menu === -->
 
     <section class="menu-bar">
         <div class="menu-bar-container">
+
+            <!--1º Menu-->
             <ul class="menu1">
                 <li>Produtos e serviços</li>
                 <li>Notícias e histórias</li>
@@ -57,9 +67,7 @@
                 <li>Carreiras</li>
                 <li><a href="#">Imprensa</a></li>
             </ul>
-            <div class="menu2">
-
-            </div>
+            
         </div>
     </section>
 

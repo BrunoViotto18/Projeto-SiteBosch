@@ -17,12 +17,6 @@ body{
 
 /* Header */
 
-@media (min-width: 768px){
-    .header {
-        height: 102px;
-    }
-}
-
 .header::before{
     position: absolute;
     left: 0;
@@ -54,7 +48,7 @@ body{
 }
 
 .header-right{
-    width: 1025px;
+    width: 250px;
     display: flex;
     flex-direction: row-reverse;
     height: 100%;
@@ -133,6 +127,7 @@ input[type=search] {
     align-self: center;
     display: flex;
     flex-direction: row;
+    margin-left: 20px;
 }
 
 .menu:hover{
@@ -178,6 +173,18 @@ input[type=search] {
 
 .menu-text{
     margin: 0 0 0 10px;
+}
+
+@media (min-width: 300px){
+    .header{
+        height: 102px;
+    }
+}
+
+@media (max-width: 1180px){
+    .header-container{
+        max-width: calc(100vw - 50px);
+    }
 }
 
 /* Menu Bar */
@@ -256,6 +263,12 @@ input[type=search] {
     border-bottom: 2px solid #008ecf;
 }
 
+@media (max-width: 800px){
+    .login-container{
+        width: calc(100vw - 20px);
+    }
+}
+
 /* Footer */
 
 .footer{
@@ -332,4 +345,10 @@ input[type=search] {
     background-size: cover;
     background-position: center center;
     background-image: url(../images/linha-bosch.png);
+}
+
+@media (max-width: 980px){
+    .footer-copyright{
+        flex-direction: column-reverse;
+    }
 }
