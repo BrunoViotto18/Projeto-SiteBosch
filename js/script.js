@@ -5,8 +5,12 @@ const burger3 = document.body.querySelector("#burger3")
 const menuBar = document.body.querySelector(".menu-bar")
 const inputbusca = document.body.querySelector(".inputbusca")
 
+//MenuBar
 menu.addEventListener('click', () => {
     menuBar.classList.toggle("menu-bar-js")
+    burger1.classList.toggle("burger1-js")
+    burger2.classList.toggle("burger2-js")
+    burger3.classList.toggle("burger3-js")
 })
 
 function aumentarTamanho(){
