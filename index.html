@@ -19,7 +19,7 @@
     <header class="header">
         <div class="header-container">
             <div class="header-left">
-                <a href="#">
+                <a href="index.html">
                     <img src=images/logobosch.png>
                 </a>
             </div>
@@ -110,7 +110,26 @@
                   </a-form-field>
             </div>
 
-            <div class="login-options"></div>
+            <div class="login-options">
+				<div class="row O-LoginForm__Row O-LoginForm__Row-No-Padding-Top">
+					<div class="col-sm-6 col-md-6">
+						<input  type = "checkbox" id = "continuarSessao" class="A-FormField__element">
+						<label for = "continuarSessao" class="A-FormField__labelText"> Manter a sessão iniciada? </ label>
+                        <span><a-form-field id="remember-login-field-sm-min" class="A-FormField A-FormField-Input A-FormField-Input-Checkbox A-FormField--noValidation">
+							<div class="A-FormField__validation A-FormField__validation--hideLine">
+							</div>
+						</span><!---->
+					</div><div class="col-sm-6 col-md-6" data-ng-if="login.forgotPassword">
+							<div class="loginForm-link--rightAligned">
+								<div class="A-Link A-Link--primary">
+									<a class="A-Link__link A-Link__link--primary" target="_self" id="forgotpasswordLinkSmMin" href="#">
+										<span class="A-Link__linkText">Esqueceu sua senha?</span>
+									</a>
+                              </div>
+							</div>
+					</div><!---->
+				</div>
+			</div>
             <div class="login-options"></div>
             <a href="areadoaluno.html" class="login-btn">
                 <span>Login</span>

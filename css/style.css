@@ -275,6 +275,7 @@ input[type=search] {
     display: block;
     position: relative;
     bottom: 0px;
+    width: 100%;
 }
 
 .redes-sociais-texto{
@@ -351,4 +352,181 @@ input[type=search] {
     .footer-copyright{
         flex-direction: column-reverse;
     }
+    .copyright-links *{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 740px){
+    .copyright-links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-height: 920px){
+    .footer{
+        position: absolute;
+        bottom: 16px;
+    }
+}
+
+/* Área do Aluno */
+.options{
+	float:right;
+	width: 57%;
+	margin:0 auto 0 auto;
+}
+.botoes{
+	display:inline-block;
+	width:fit-content;
+	border-radius:5px 5px 0 0;
+	color:white;
+	padding:5px 10px;
+    cursor: pointer;
+}
+#botao1{
+	background-color:#b92532;
+}
+#botao1:hover{
+	background-color:#d61828;
+}
+#botao2{
+	background-color:#64439a;
+}
+#botao2:hover{
+	background-color:#5928a8;
+}
+#botao3{
+	background-color:#229ec5;
+}
+#botao3:hover{
+	background-color:#00bef8;
+}
+#botao4{
+	background-color:#7abb78;
+}
+#botao4:hover{
+	background-color:#3fbb3b;
+}
+.main{
+    margin-top: 100px;
+    width: 100%;
+    height:550px;
+}
+
+.prova-senai{
+    grid-area: provasenai;
+}
+
+.prova-bosch{
+    grid-area: provabosch;
+}
+
+.competencias{
+    grid-area: competencias;
+}
+
+.main-container{
+    display: grid;
+    grid-template-areas: 
+    "provasenai competencias"
+    "provabosch competencias";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    height: 100%;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.prova-bosch h2, .prova-senai h2{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.prova-senai, .prova-bosch, .competencias{
+    background-color: #fff;
+    padding: 20px;
+}
+
+.nota{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.nota-btn{
+  border: 1px solid #008ecf;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 20px;
+  }
+
+.nota-btn:hover{
+  color: #008ecf;
+  background-color: #eaeaea;
+}
+
+.mais-detalhes-bosch{
+    /*display: none;*/
+    transition: all 0.3s ease-in-out;
+}
+
+.competencias-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2px;
+  width: 100%;
+  height: 75%;
+  padding: 5px;
+}
+
+.competencia{
+  width:125px;
+  text-align: center;
+}
+
+.apto{
+    background: rgb(24,136,226);
+    background: linear-gradient(0deg, rgba(24,136,226,0.5) 0%, rgba(67,163,240,0.5) 35%, rgba(99,175,236,0.4) 100%);
+}
+
+.nao-apto{
+  background: rgb(242,14,6);
+  background: linear-gradient(90deg, rgba(242,14,6,1) 0%, rgba(245,43,36,1) 35%, rgba(223,80,75,1) 100%); 
+}
+
+.falta{
+  background: rgb(229,237,0); 
+  background: linear-gradient(90deg, rgba(229,237,0,1) 0%, rgba(233,240,43,1) 35%, rgba(230,235,93,1) 100%);  
+}
+
+
+.apto{
+    background: #4DC6F7;
+}
+
+.nao-apto{
+  background: #F76580;
+}
+
+.falta{
+  background: #FCF44C;   
+}
+
+
+.apto{
+    background: #7FFFD6;
+}
+
+.nao-apto{
+  background: #EE94FF;
+}
+
+.falta{
+  background: #FFD66B;   
 }
