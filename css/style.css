@@ -474,17 +474,17 @@ input[type=search] {
 }
 
 .nota-btn{
-  border: 1px solid #008ecf;
-  margin: 0 auto;
-  width: fit-content;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-size: 20px;
-  }
+    border: 1px solid #008ecf;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
 
 .nota-btn:hover{
-  color: #008ecf;
-  background-color: #eaeaea;
+    color: #008ecf;
+    background-color: #eaeaea;
 }
 
 .mais-detalhes-bosch{
@@ -493,18 +493,21 @@ input[type=search] {
 }
 
 .competencias-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 2px;
-  width: 100%;
-  height: 75%;
-  padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2px;
+    width: 100%;
+    height: 75%;
+    padding: 5px;
 }
 
 .competencia{
-  text-align: center;
-  padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
 }
 
 .apto{
@@ -513,13 +516,13 @@ input[type=search] {
 }
 
 .nao-apto{
-  background: rgb(242,14,6);
-  background: linear-gradient(90deg, rgba(242,14,6,1) 0%, rgba(245,43,36,1) 35%, rgba(223,80,75,1) 100%); 
+    background: rgb(242,14,6);
+    background: linear-gradient(90deg, rgba(242,14,6,1) 0%, rgba(245,43,36,1) 35%, rgba(223,80,75,1) 100%); 
 }
 
 .falta{
-  background: rgb(229,237,0); 
-  background: linear-gradient(90deg, rgba(229,237,0,1) 0%, rgba(233,240,43,1) 35%, rgba(230,235,93,1) 100%);  
+    background: rgb(229,237,0); 
+    background: linear-gradient(90deg, rgba(229,237,0,1) 0%, rgba(233,240,43,1) 35%, rgba(230,235,93,1) 100%);  
 }
 
 
@@ -528,11 +531,11 @@ input[type=search] {
 }
 
 .nao-apto{
-  background: #F76580;
+    background: #F76580;
 }
 
 .falta{
-  background: #FCF44C;   
+    background: #FCF44C;   
 }
 
 
@@ -541,11 +544,11 @@ input[type=search] {
 }
 
 .nao-apto{
-  background: #EE94FF;
+    background: #EE94FF;
 }
 
 .falta{
-  background: #FFD66B;   
+    background: #FFD66B;   
 }
 
 
