@@ -77,25 +77,62 @@
         <div class="main-container">
             <section class="prova-senai">
                 <h2>Prova SENAI</h2>
-                <div class="nota">
+                <div class="nota" id="nota-senai">
                     Nota: 9,3
                 </div>
-                <div class="nota-btn nota-senai">
+                <div onclick="openModalsenai('dv-modal-senai')" class="nota-senai-btn">
                     Mais Detalhes
                 </div>
+                <div id="dv-modal-senai" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="modal-header-title-senai">Prova Senai Python</h3>
+                        </div>
+                        <div class="modal-body senaimodal modal-body-senai">
+                            <div class="um">Questão 01: 3,0</div>
+                            <div class="dois">Questão 02: 2,5</div>
+                            <div class="tres">Questão 03: 1,5</div>
+                            <div class="quatro">Questão 04: 2,0</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" onclick="closeModalsenai('dv-modal-senai')">Fechar</button>
+                        </div>
+                    </div>
+                </div>
             </section>
+
             <section class="prova-bosch">
                 <h2>Prova BOSCH</h2>
-                <div class="nota">
+                <div class="nota" id="nota-bosch">
                     Nota: 9,3
                 </div>
-                <div class="nota-btn nota-bosch">
+                <div onclick="openModal('dv-modal')" class="nota-bosch-btn">
                     Mais Detalhes
                 </div>
-                <div id="mais-detalhes-bosch">
-                  
+                <div id="dv-modal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="modal-header-title-bosch">Prova Bosch Python</h3>
+                        </div>
+            
+                        <div class="modal-body" id="modal-body-bosch">
+                            <div class="um">Questão 01: 1,0</div>
+                            <div class="dois">Questão 02: 1,0</div>
+                            <div class="tres">Questão 03: 1,0</div>
+                            <div class="quatro">Questão 04: 0,6</div>
+                            <div class="cinco">Questão 05: 0,7</div>
+                            <div class="seis">Questão 06: 1,0</div>
+                            <div class="sete">Questão 07: 1,0</div>
+                            <div class="oito">Questão 08: 1,0</div>
+                            <div class="nove">Questão 09: 1,0</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn" onclick="closeModal('dv-modal')">Fechar</button>
+                        </div>
+                    </div>
                 </div>
             </section>
+
             <section class="competencias">
                 <div class="options">
                     <div id="botao1" class="botoes">Python</div>
@@ -106,10 +143,24 @@
 
                 <div class="info-aluno">
                     <h3>Nome: Aluno</h3>
-                    <h4>Matéria: Python</h4>
+                    <h4 id="materia">Matéria: Python</h4>
+                </div>
+                <div class="legenda">
+                    <div class="L-apto">
+                        <div class="cor-apto"></div>
+                        <span>Apto</span>
+                    </div>
+                    <div class="L-nao-apto">
+                        <div class="cor-naoapto"></div>
+                        <span>Não-Apto</span>
+                    </div>
+                    <div class="L-falta">
+                        <div class="cor-falta"></div>
+                        <span>Conteúdo<br>não-abordado</span>
+                    </div>
                 </div>
                 <div class="competencias-container">
-                    <div class="competencia apto">Criar um programa</div>
+                    <div class="competencia apto">Criar um<br>programa</div>
                     <div class="competencia apto">Declarar variáveis</div>
                     <div class="competencia apto">Compreender tipos</div>
                     <div class="competencia apto">Inserir dados</div>
@@ -124,13 +175,13 @@
                     <div class="competencia apto">Uso do If</div>
                     <div class="competencia apto">Uso do else e elif</div>
                     <div class="competencia apto">Uso de funções</div>
-                    <div class="competencia falta">Uso de bibliotecas</div>
+                    <div class="competencia falta">Uso de<br>bibliotecas</div>
                     <div class="competencia nao-apto">Manipulação de arquivos</div>
                     <div class="competencia falta">Criação de arrays</div>
                     <div class="competencia falta">Manipulação de arrays</div>
-                    <div class="competencia falta">Manipulação de arrays Multidimensionais</div>
+                    <div class="competencia falta">Manipulação<br>de arrays<br>Multidimensionais</div>
                     <div class="competencia nao-apto">Criar Series (Pandas)</div>
-                    <div class="competencia apto">Criar DataFrame (Pandas)</div>
+                    <div class="competencia apto">Criar DataFrame<br>(Pandas)</div>
                     <div class="competencia apto">Manipular dados</div>
                     <div class="competencia apto">Exibir dados</div>
                     <div class="competencia nao-apto">Criar gráficos</div>

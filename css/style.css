@@ -12,7 +12,6 @@ body{
     color: #252525;
     position: relative;
     overflow-x: hidden;
-    /*overflow-y: hidden;*/
 }
 
 /* Header */
@@ -257,16 +256,38 @@ input[type=search] {
 .login-ets h1{
     color: #005691;
     font-size: 1.75rem;
+    font-weight: 200;
+    margin-bottom: 50px;
+}
+
+.edv{
+    margin-bottom: 20px;
+}
+
+.senha{
+    margin-bottom: 25px;
+}
+
+.login-options{
+    margin-bottom: 25px;
 }
 
 .login-btn{
     background-color: #1a679c;
     color: #fff;
-    display: block;
     width: 120px;
     height: 50px;
     text-decoration: none;
     border-bottom: 2px solid #008ecf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.login-btn:hover span{
+    color: #fff;
 }
 
 @media (max-width: 800px){
@@ -378,6 +399,7 @@ input[type=search] {
 }
 
 /* Área do Aluno */
+
 .options{
     position: absolute;
     top: -34px;
@@ -422,6 +444,37 @@ input[type=search] {
 	background-color:#3fbb3b;
 }
 
+.legenda{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.legenda > *{
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.cor-apto, .cor-naoapto, .cor-falta{
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    position: relative;
+    top: 2px;
+    left: -5px;
+}
+
+.cor-apto{
+  background-color:#7FFFD6; 
+}
+
+.cor-naoapto{
+    background: #EE94FF;
+}
+
+.cor-falta{
+    background-color: #FFD66B;
+}
 .main{
     margin-top: 60px;
     margin-bottom: 30px;
@@ -431,15 +484,18 @@ input[type=search] {
 
 .prova-senai{
     grid-area: provasenai;
+    border-radius: 10px;
 }
 
 .prova-bosch{
     grid-area: provabosch;
+    border-radius: 10px;
 }
 
 .competencias{
     position: relative;
     grid-area: competencias;
+    border-radius: 10px;
 }
 
 .main-container{
@@ -473,7 +529,7 @@ input[type=search] {
     margin-bottom: 25px;
 }
 
-.nota-btn{
+.nota-bosch-btn, .nota-senai-btn{
     border: 1px solid #008ecf;
     margin: 0 auto;
     width: fit-content;
@@ -482,14 +538,9 @@ input[type=search] {
     font-size: 20px;
 }
 
-.nota-btn:hover{
+.nota-bosch-btn:hover, .nota-senai-btn:hover{
     color: #008ecf;
     background-color: #eaeaea;
-}
-
-.mais-detalhes-bosch{
-    /*display: none;*/
-    transition: all 0.3s ease-in-out;
 }
 
 .competencias-container{
@@ -510,45 +561,142 @@ input[type=search] {
     padding: 5px;
 }
 
-.apto{
-    background: rgb(24,136,226);
-    background: linear-gradient(0deg, rgba(24,136,226,0.5) 0%, rgba(67,163,240,0.5) 35%, rgba(99,175,236,0.4) 100%);
+.competencia:hover{
+    transition: all 0.3s linear;
 }
-
-.nao-apto{
-    background: rgb(242,14,6);
-    background: linear-gradient(90deg, rgba(242,14,6,1) 0%, rgba(245,43,36,1) 35%, rgba(223,80,75,1) 100%); 
-}
-
-.falta{
-    background: rgb(229,237,0); 
-    background: linear-gradient(90deg, rgba(229,237,0,1) 0%, rgba(233,240,43,1) 35%, rgba(230,235,93,1) 100%);  
-}
-
-
-.apto{
-    background: #4DC6F7;
-}
-
-.nao-apto{
-    background: #F76580;
-}
-
-.falta{
-    background: #FCF44C;   
-}
-
 
 .apto{
     background: #7FFFD6;
+}
+.apto:hover{
+    background: #60FF98;
 }
 
 .nao-apto{
     background: #EE94FF;
 }
+.nao-apto:hover{
+    background: #FF76EC;
+}
 
 .falta{
     background: #FFD66B;   
+}
+.falta:hover{
+    background: #FFBD4E;   
+}
+
+.btn {
+    border: 1px solid #008ecf;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+}
+
+.btn:hover {
+    color: #008ecf;
+    background-color: #eaeaea;
+}
+.modal {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index:100;
+}
+.modal-body{
+    display: grid;
+    grid-template-areas: 
+    "um quatro sete"
+    "dois cinco oito"
+    "tres seis nove";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 200px;
+}
+.dv-modal-senai{
+    width: 100vw;
+    max-width: 100vw;
+}
+.senaimodal{
+    display: grid;
+    grid-template-areas: 
+    "um tres"
+    "dois quatro";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height: 200px;
+}
+.modal-body > * {
+    background-color: #E0E0E0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.modal-content {
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 600px;
+    max-width: calc(100vw - 20px);
+    height: fit-content;
+    background-color: #eee;
+    padding: 0;
+    box-shadow: 0 0 2px #fff;
+    transform:translate(-50%,-50%);
+    top:50%;
+    left: 50%;
+    position: absolute;
+    overflow: hidden;
+}
+.um{
+    grid-area: um;
+}
+.dois{
+    grid-area: dois;
+}
+.tres{
+    grid-area: tres;
+}
+.quatro{
+    grid-area: quatro;
+}
+.cinco{
+    grid-area: cinco;
+}
+.seis{
+    grid-area: seis;
+}
+.sete{
+    grid-area: sete;
+}
+.oito{
+    grid-area: oito;
+}
+.nove{
+    grid-area: nove;
+}
+.modal-header h3{
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.modal-header, .modal-body, .modal-footer{
+    padding: 20px;
+}
+.modal-footer{
+    background-color: rgb(231, 231, 231);
 }
 
 
@@ -558,7 +706,7 @@ input[type=search] {
         "competencias competencias"
         "provasenai provabosch";
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 5fr 2fr;
+        grid-template-rows: 11fr 5fr;
         gap: 20px;
         height: 100%;
         width: 1000px;
@@ -568,6 +716,10 @@ input[type=search] {
 }
 
 @media (max-width: 860px){
+    .main-container{
+        grid-template-rows: 11fr 4fr;
+    }
+
     .competencias-container{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: repeat(7, 1fr);
@@ -575,6 +727,10 @@ input[type=search] {
 }
 
 @media (max-width: 680px){
+    .main-container{
+        grid-template-rows: 10fr 3fr;
+    }
+
     .competencias-container{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(9, 1fr);
@@ -588,7 +744,7 @@ input[type=search] {
         'provasenai'
         'provabosch';
         grid-template-columns: 1fr;
-        grid-template-rows: 7fr 2fr 2fr;
+        grid-template-rows: 8fr 2fr 2fr;
     }
 }
 
@@ -598,3 +754,4 @@ input[type=search] {
         grid-template-rows: repeat(13, 1fr);
     }
 }
+

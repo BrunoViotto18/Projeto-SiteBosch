@@ -82,7 +82,7 @@
             <div class="edv">
                 <a-form-field class="A-FormField A-FormField-Input A-FormField-Input-Email">
                     <div class="A-FormField__wrapper">
-                        <input type="text" class="A-FormField__element ng-pristine ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-touched" name="uEmail" id="email-field" value="" data-ng-model="$LoginFormCtrl.user.email" data-ng-init="$LoginFormCtrl.user.email = ''" data-ng-required="true" data-ng-pattern="/.+@.+\..+/" data-ng-maxlength="255" required="required">      <label for="email-field" class="A-FormField__label">
+                        <input type="text" class="A-FormField__element ng-pristine ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern ng-valid-maxlength ng-touched edv" name="uEmail" id="email-field" value="" data-ng-required="true" data-ng-pattern="/.+@.+\..+/" data-ng-maxlength="255" required="required">      <label for="email-field" class="A-FormField__label">
                         <span class="A-FormField__labelText">EDV</span></label>
                         <span class="A-FormField__background"></span>
                     </div>
@@ -95,7 +95,7 @@
             <div class="password">
                 <a-form-field class="A-FormField A-FormField-Input A-FormField-Input-Password">
                     <div class="A-FormField__wrapper">
-                        <input type="password" class="A-FormField__element ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched" name="uPassword" id="password-field" value="" data-ng-model="$LoginFormCtrl.user.password" data-ng-required="true" autocomplete="off" required="required">        <div class="formfield-password-visibility" data-ng-click="$ctrl.toggleVisibility()">
+                        <input type="password" class="A-FormField__element ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched senha" name="uPassword" id="password-field" value="" data-ng-model="$LoginFormCtrl.user.password" data-ng-required="true" autocomplete="off" required="required">        <div class="formfield-password-visibility" data-ng-click="$ctrl.toggleVisibility()">
                             <!----><div ng-if="($ctrl.$inputType === 'password')" class="">
                             </div><!---->
                             <!---->
@@ -133,6 +133,11 @@
             <div class="login-options"></div>
             <a href="areadoaluno.html" class="login-btn">
                 <span>Login</span>
+            </a>
+            <a href="#" class="registrar">
+                <span>
+                    Ainda não registrado?
+                </span>
             </a>
         </div>
     </section>
